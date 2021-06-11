@@ -7,21 +7,21 @@ import CardBButtom from '../../component/CardButtom';
 
 function HomeScreen({ navigation }) {
     return (
-      <View style={{ padding: 60,flex: 1, alignItems: 'center', justifyContent: 'flex-start'}}>
+      <View style={{ paddingTop: 60,paddingLeft: 1,flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start'}}>
         
-        <TouchableOpacity onPress={() => navigation.navigate('Credenciados')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Médicos')}>
            <CardBButtom>
                 <Text>Medicos/Consultórios</Text>
            </CardBButtom>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Laboratórios')}>
            <CardBButtom>
                 <Text>Laboratórios</Text>
            </CardBButtom>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Hospitais')}>
            <CardBButtom>
                 <Text>Hospitais/Clinicas</Text>
            </CardBButtom>

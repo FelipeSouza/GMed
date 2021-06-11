@@ -4,11 +4,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import CardBButtom from '../../component/CardButtom';
 import SearchBarList from '../../component/SearchBar';
 
-
-
 const data = [
     { id: '1', title: 'ELAINE DE BATTISTI RIBEIRO', espec:'Ginecologia', end:'rua AFONSO SENNA' },
-    { id: '2', title: 'Medico 2' },
+    { id: '2', title: 'HUMBERTO BERNARDES',espec:'Urologia' },
     { id: '3', title: 'Medico 3' },
     { id: '4', title: 'Medico 4' },
     { id: '5', title: 'Medico 5' },
@@ -19,8 +17,7 @@ const data = [
     { id: '10', title: 'Medico 10' },
   ];
 
-
-function ListScreen({ navigation }) { 
+function LabScreen({ navigation }) { 
     return (
       <SafeAreaView>
           <SearchBarList/>
@@ -28,11 +25,10 @@ function ListScreen({ navigation }) {
             data={data}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
-            <View style={{ padding: 3,flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start'}}>
+            <View style={{ padding: 1,flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start'}}>
                <CardBButtom>
                     <TouchableOpacity onPress={() => navigation.navigate('Detalhes')}>
-                        <Text style={styles.listItemText}>{item.title}</Text>
-                        <Text>Especialidade: {item.espec}</Text>
+                        <Text>Laboratorios</Text>
                     </TouchableOpacity>
                 </CardBButtom> 
           </View>
@@ -43,7 +39,7 @@ function ListScreen({ navigation }) {
       
     );
   }
-  export default ListScreen;
+  export default LabScreen;
 
 const styles = StyleSheet.create({
           text: {

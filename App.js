@@ -3,7 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/pages/HomeScreen';
 import DetailsScreen from './src/pages/DetailsScreen';
-import ListScreen from './src/pages/ListScreen';
+import MedScreen from './src/pages/MedScreen';
+import LabScreen from './src/pages/LabScreen';
+import HospScreen from './src/pages/HospScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,7 +25,27 @@ function App() {
               
             } 
         />
-        <Stack.Screen name="Credenciados" component={ListScreen} 
+        <Stack.Screen name="Médicos" component={MedScreen} 
+              options={{ 
+                headerStyle:{
+                  backgroundColor:'#248728',
+                 },
+                 headerTintColor: '#fff',
+               }
+               
+             } 
+        />
+        <Stack.Screen name="Laboratórios" component={LabScreen} 
+              options={{ 
+                headerStyle:{
+                  backgroundColor:'#248728',
+                 },
+                 headerTintColor: '#fff',
+               }
+               
+             } 
+        />
+        <Stack.Screen name="Hospitais" component={HospScreen} 
               options={{ 
                 headerStyle:{
                   backgroundColor:'#248728',
